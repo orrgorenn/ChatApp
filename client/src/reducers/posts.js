@@ -3,8 +3,10 @@ export default (posts = [], action) => {
         case 'FETCH_ALL':
             return action.payload;
         case 'CREATE':
-            return posts;
+            console.log('create');
+            return [...posts, action.payload];
         default:
+            console.log('posts');
             return posts;
     }
 }
